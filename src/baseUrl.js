@@ -1,4 +1,4 @@
-export const apiUrl = "https://api.themoviedb.org/3";
+export const apiBaseUrl = "https://api.themoviedb.org/3";
 export const moviesPopular = "/discover/movie?sort_by=popularity.desc";
 export const moviesSearch = "/search/movie/";
 export const movieGenreList = "/genre/movie/list";
