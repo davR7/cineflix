@@ -1,9 +1,12 @@
 import './style.css';
+import MaxMovieLogo from '../../components/MaxMovieLogo';
+import AppSearchBar from '../AppSearchBar';
 
 const AppHeader = () => {
   return (
     <div className="app-header">
-      <h3>Header</h3>
+      <MaxMovieLogo />
+      <AppSearchBar />
     </div>
   )
 }
