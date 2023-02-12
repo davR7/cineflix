@@ -20,7 +20,7 @@ const useHttp = url => {
       .finally(setLoading(false))
   }, [url])
 
-  return [data, error, loading]
+  return {data, error, loading}
 };
 
 export default useHttp;
