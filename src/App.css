@@ -1,7 +1,7 @@
 .App {
-  padding: 30px;
+  padding: 20px;
   display: grid;
   grid-template-columns: 4fr;
   grid-template-rows: 100px auto 100px;
-  gap: 20px
+  gap: 30px
 }
