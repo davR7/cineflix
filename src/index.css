@@ -25,3 +25,10 @@ code {
   margin-bottom: 40px;
   text-align: center;
 }
+
+.error-message,
+.info-message {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 40px 0;
+}
