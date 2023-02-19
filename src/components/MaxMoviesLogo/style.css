@@ -1,0 +1,26 @@
+.max-movies-logo {
+  margin: 20px 0;
+}
+
+.max-movies-logo__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.max-movies-logo__text {
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 1.5rem;
+  margin-left: 10px;
+  color: var(--logoColor);
+}
+
+.max-movies-logo__img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 850px) {
+  .max-movies-logo__wrapper {
+    justify-content: flex-start;
+  }
+}
