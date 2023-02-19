@@ -1,13 +1,23 @@
+/* =============FONTS================ */
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Roboto:wght@300;400;700&display=swap');
+
+/* =============VARIABLES================ */
+:root {
+  --dark: #1D1E1B; --dark2: #333; --light: #FFF; 
+  --light2: #F1F1F1; --primary: #1E90FF; --secondary: #B22222;
+  --logoColor: #fa5c66;
+}
+
 /* =============RESET================ */
 * {margin: 0; padding: 0; border: none; outline: none; font-size: 100%; box-sizing: border-box;}
 ul {list-style: none;}
-a {text-decoration: none; color: #fff}
+a {text-decoration: none; color: var(--light)}
 img {width: 100%;}
 
 /* ===============Global CSS=================== */
 body {
-  background-color: #282c34;
-  color: #fff;
+  background-color: var(--dark);
+  color: var(--light);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -18,6 +28,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.space {
+  flex: 1 0 auto;
 }
 
 .page-title {
