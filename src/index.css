@@ -14,7 +14,7 @@ ul {list-style: none;}
 a {text-decoration: none; color: var(--light)}
 img {width: 100%;}
 
-/* ===============Global CSS=================== */
+/* ===============Generic Style=================== */
 body {
   background-color: var(--dark);
   color: var(--light);
