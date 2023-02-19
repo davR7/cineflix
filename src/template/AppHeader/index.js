@@ -1,11 +1,14 @@
 import './style.css';
-import MaxMovieLogo from '../../components/MaxMovieLogo';
+import MaxMoviesLogo from '../../components/MaxMoviesLogo';
 import AppSearchBar from '../AppSearchBar';
+import { Link } from 'react-router-dom';
 
 const AppHeader = () => {
   return (
     <div className="app-header">
-      <MaxMovieLogo />
+      <Link to="/">
+        <MaxMoviesLogo />
+      </Link>
       <AppSearchBar />
     </div>
   )
