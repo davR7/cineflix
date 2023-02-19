@@ -1,7 +1,13 @@
 .App {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 120vh;
+}
+
+.App__wrapper {
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 4fr;
-  grid-template-rows: 100px auto 100px;
-  gap: 30px
+  grid-template-rows: 100px auto;
+  row-gap: 60px;
 }
