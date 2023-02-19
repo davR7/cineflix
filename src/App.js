@@ -1,12 +1,16 @@
 import './App.css';
 import AppRoutes from './routes';
 import AppHeader from './template/AppHeader';
+import AppFooter from './template/AppFooter';
 
 function App() {
   return (
     <div className="App">
-      <AppHeader />
-      <AppRoutes />
+      <div className="App__wrapper space">
+        <AppHeader />
+        <AppRoutes />
+      </div>
+      <AppFooter />
     </div>
   );
 }
