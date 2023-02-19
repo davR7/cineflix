@@ -3,7 +3,7 @@ import './style.css';
 const AppFooter = () => {
   return (
     <div className="app-footer">
-      <h3>Footer</h3>
+      <p className="app-footer__text">MaxMovies &copy; 2023</p>
     </div>
   )
 }

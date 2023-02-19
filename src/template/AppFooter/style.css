@@ -1,0 +1,11 @@
+.app-footer {
+  background-color: var(--secondary);
+  padding: 40px;
+  margin-top: 40px;
+}
+
+.app-footer__text {
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
