@@ -1,4 +1,5 @@
 import './style.css';
+import { scrollToTopSmooth } from '../../utils';
 
 const MAX_BTN = 9;
 const MAX_BTN_LEFT = (MAX_BTN - 1) / 2;
@@ -6,6 +7,11 @@ const MAX_BTN_LEFT = (MAX_BTN - 1) / 2;
 const MoviesPagination = ({items, limit = 20, page, setPage}) => {
   const pages = items !== null && Math.ceil(items.total_results / limit);
   const startBtn = Math.max(page - MAX_BTN_LEFT, 1);
+  
+  const handlePageChange = value => {
+    setPage(value);
+    scrollToTopSmooth()
+  }
 
   return (
     <ul className="movie-pagination">
@@ -17,7 +23,7 @@ const MoviesPagination = ({items, limit = 20, page, setPage}) => {
                 'movie-pagination__previous disabled' : 
                 'movie-pagination__previous'
             }
-            onClick={() => setPage(value => value - 1)}
+            onClick={() => handlePageChange(value => value - 1)}
             disabled={page === 1}
           >&laquo;</button>
       </li>)
@@ -31,7 +37,7 @@ const MoviesPagination = ({items, limit = 20, page, setPage}) => {
                 'movie-pagination__num active' : 
                 'movie-pagination__num'
               } 
-              onClick={() => setPage(value)}
+              onClick={() => handlePageChange(value)}
             >{value}</button>
           </li>
         ))
@@ -44,7 +50,7 @@ const MoviesPagination = ({items, limit = 20, page, setPage}) => {
                 'movie-pagination__next disabled' : 
                 'movie-pagination__next'
             }
-            onClick={() => setPage(value => value + 1)}
+            onClick={() => handlePageChange(value => value + 1)}
             disabled={page === pages}
           >&raquo;</button>
         </li>)
