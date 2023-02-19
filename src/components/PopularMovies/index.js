@@ -1,25 +1,45 @@
 import './style.css';
 import Loading from '../Loading'
 import MovieCard from '../MovieCard';
-import useHttp from '../../hooks/useHttp';
-import { apiBaseUrl, moviesPopular, movieGenreList, movieLang } from '../../baseUrl';
+import MoviesPagination from '../MoviesPagination';
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
+import useFetch from '../../hooks/useFetch';
+import { apiBaseUrl, moviesPopular, movieGenreList, movieLang } from '../../baseUrl';
 
 const PopularMovies = () => {
-  const { REACT_APP_API_KEY } = process.env;
-  const [popularMovies] = useHttp(`${apiBaseUrl}${moviesPopular}&${REACT_APP_API_KEY}&${movieLang}`);
-  const [allGenres] = useHttp(`${apiBaseUrl}${movieGenreList}?${REACT_APP_API_KEY}&${movieLang}`)
+  const [page, setPage] = useState(1);
+
+  const { 
+    REACT_APP_API_KEY 
+  } = process.env;
+  const {
+    loading: loadingPopularMovies,
+    data: popularMovies,
+    error: errorPopularMovies,
+  } = useFetch(`${apiBaseUrl}${moviesPopular}&${REACT_APP_API_KEY}&page=${page}&${movieLang}`);
+  const {
+    data: dataGenres
+  } = useFetch(`${apiBaseUrl}${movieGenreList}?${REACT_APP_API_KEY}&${movieLang}`);
   
   return (
     <div className="popular-movies">
-      {popularMovies === null && allGenres && <Loading />}
+      {loadingPopularMovies && <Loading />}
+      {errorPopularMovies && <p className="error-message">{errorPopularMovies}</p>}
       <div className="popular-movies__items">
-        {popularMovies !== null && popularMovies.results.map(movie => (
-          <Link to={`/movie/${movie.id}`} key={movie.id}>
-            <MovieCard movie={movie} allGenres={allGenres}/>
-          </Link>
-        ))}
+        {!loadingPopularMovies && popularMovies && 
+          popularMovies.results.map(movie => (
+            <Link to={`/movie/${movie.id}`} key={movie.id}>
+              <MovieCard movie={movie} allGenres={dataGenres}/>
+            </Link>
+          ))
+        }
       </div>
+      <MoviesPagination
+        items={popularMovies}
+        page={page} 
+        setPage={setPage}
+      />
     </div>
   )
 }
