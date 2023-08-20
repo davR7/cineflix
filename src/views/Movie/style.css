@@ -1,0 +1,16 @@
+.movie {
+  display: grid;
+  gap: 20px;
+}
+
+.movie__bar {
+  min-height: 500px;
+}
+
+@media (min-width: 900px) {
+  .movie {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 40px;
+  }
+}
