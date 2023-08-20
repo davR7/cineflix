@@ -20,7 +20,7 @@
 
 .movie-pagination__num {
   border: 1px solid var(--light2);
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   padding: 8px 16px;
 }
 
@@ -32,8 +32,8 @@
 }
 
 .movie-pagination .movie-pagination__btn:hover:not(.active) {
-  background-color: var(--light2); 
-  color: #333
+  background-color: var(--light2);
+  color: #333;
 }
 
 .movie-pagination .active {

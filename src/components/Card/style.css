@@ -16,8 +16,12 @@
   font-family: sans-serif;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: visibility 0s, opacity 0.5s linear;
-  transition: visibility 0s, opacity 0.5s linear;
+  -webkit-transition:
+    visibility 0s,
+    opacity 0.5s linear;
+  transition:
+    visibility 0s,
+    opacity 0.5s linear;
 }
 
 .movie-card:hover {
@@ -27,7 +31,7 @@
 .movie-card:hover .movie-card__title {
   visibility: visible;
   padding: 8px 15px;
-  opacity: 0.7; 
+  opacity: 0.7;
 }
 
 .genres {
