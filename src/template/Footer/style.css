@@ -5,7 +5,7 @@
 }
 
 .app-footer__text {
-  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: var(--font-family-2);
   font-size: 1rem;
   text-align: center;
 }
