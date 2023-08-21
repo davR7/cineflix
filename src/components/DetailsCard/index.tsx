@@ -2,7 +2,7 @@ import './style.css';
 import Loading from '../Loading';
 import { movieImg } from '../../baseUrl';
 import noImage from '../../assets/img/no_image.jpg';
-import { formatDate, noExistTerm } from '../../utils';
+import { formatDate, noExistImg } from '../../utils';
 import { useScrollToTop } from '../../hooks/useScrollToTop';
 import { MovieDetailsProps } from '../../types/MovieDetails';
 
@@ -30,7 +30,7 @@ const DetailsCard: React.FC<DetailsCardProps> = ({
           <img
             className="movie-details__img"
             src={
-              noExistTerm(movieDetails.poster_path, 'null')
+              noExistImg(movieDetails.poster_path)
                 ? noImage
                 : movieImg + movieDetails?.poster_path
             }
