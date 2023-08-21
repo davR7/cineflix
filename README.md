@@ -9,7 +9,7 @@ utilizado o fetch recurso nativo do JavaScript.
 - react v18 
 - react-router-dom v6.8
 - react-youtube v10
-- typescript
+- typescript v4.9
 
 ## Requisitos:
 - Cadastro no site The Movie Database.
