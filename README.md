@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://vitejs.dev/" target="blank"><img src="./public/logo.png" width="200" alt="ViteJs" /></a>
+  <a href="https://react.dev/" target="_blank"><img src="./public/logo.png" width="200" alt="ReactJs" /></a>
 </div>
 
 # Cineflix
