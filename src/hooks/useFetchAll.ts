@@ -6,13 +6,18 @@ type FetchProps<T, U> = {
   loading: boolean;
 };
 
-export const useFetchAll = <T, U>(urls: string[]): FetchProps<T, U> => {
+export const useFetchAll = <T, U>(urls: string[], accessToken: string): FetchProps<T, U> => {
   const [data, setData] = useState<FetchProps<T, U>['data'] | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: 'Bearer ' + accessToken
+  };
+
   const generatePromises = (urls: string[]) =>
-    urls.map(url => fetch(url).then(res => res.json()));
+    urls.map(url => fetch(url, { headers }).then(res => res.json()));
 
   useEffect(() => {
     const promises = generatePromises(urls);

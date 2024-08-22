@@ -6,14 +6,19 @@ type FetchProps<T> = {
   loading: boolean;
 };
 
-const useFetch = <T>(url: string): FetchProps<T> => {
+const useFetch = <T>(url: string, accessToken: string): FetchProps<T> => {
   const [data, setData] = useState<T | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
+  const headers = {
+    "Content-Type": "application/json",
+    Authorization: 'Bearer ' + accessToken
+  };
+
   useEffect(() => {
     setLoading(true);
-    fetch(url)
+    fetch(url, { headers })
       .then(res => res.json())
       .then(res => setData(res))
       .catch(err => setError(err))
