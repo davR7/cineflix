@@ -51,6 +51,16 @@ code {
     monospace;
 }
 
+.container {
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-space {
+  padding: 20px 0;
+}
+
 .space {
   flex: 1 0 auto;
 }
@@ -58,7 +68,7 @@ code {
 .page-title {
   font-family: var(--font-family-3);
   font-size: 1.2rem;
-  margin-bottom: 40px;
+  margin: 40px 0;
   text-align: center;
 }
 
