@@ -12,17 +12,20 @@ import {
 import CardGroup from '../../components/CardGroup';
 
 const Home = () => {
-  const { REACT_APP_API_KEY } = process.env;
+  const { VITE_ACCESS_TOKEN } = import.meta.env;
   const { page } = usePage();
 
   const {
     data: apiData,
     error: apiError,
     loading: apiLoading,
-  } = useFetchAll<MoviesProps, GenresProps>([
-    `${apiBaseUrl}${moviesPopular}&${REACT_APP_API_KEY}&page=${page}&${movieLang}`,
-    `${apiBaseUrl}${movieGenreList}?${REACT_APP_API_KEY}&${movieLang}`,
-  ]);
+  } = useFetchAll<MoviesProps, GenresProps>(
+    [
+      `${apiBaseUrl}${moviesPopular}&page=${page}&${movieLang}`,
+      `${apiBaseUrl}${movieGenreList}?${movieLang}`,
+    ],
+    VITE_ACCESS_TOKEN
+  );
 
   return (
     <main className="home">

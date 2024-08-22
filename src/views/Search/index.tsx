@@ -17,16 +17,19 @@ const Search = () => {
   const { page } = usePage();
   const [searchParams] = useSearchParams();
   const query = searchParams.get('q');
-  const { REACT_APP_API_KEY } = process.env;
+  const { VITE_ACCESS_TOKEN } = import.meta.env;
 
   const {
     data: apiData,
     error: apiError,
     loading: apiLoading,
-  } = useFetchAll<MoviesProps, GenresProps>([
-    `${apiBaseUrl}${moviesSearch}?${REACT_APP_API_KEY}&query=${query}&page=${page}&${movieLang}`,
-    `${apiBaseUrl}${movieGenreList}?${REACT_APP_API_KEY}&${movieLang}`,
-  ]);
+  } = useFetchAll<MoviesProps, GenresProps>(
+    [
+      `${apiBaseUrl}${moviesSearch}?query=${query}&page=${page}&${movieLang}`,
+      `${apiBaseUrl}${movieGenreList}?${movieLang}`,
+    ],
+    VITE_ACCESS_TOKEN
+  );
 
   return (
     <main className="search">

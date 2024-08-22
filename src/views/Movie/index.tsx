@@ -8,14 +8,15 @@ import { useParams } from 'react-router-dom';
 
 const Movie = () => {
   const { id } = useParams();
-  const { REACT_APP_API_KEY } = process.env;
+  const { VITE_ACCESS_TOKEN } = import.meta.env;
 
   const {
     data: movieDetails,
     error: errorMovieDetails,
     loading: loadingMovieDetails,
   } = useFetch<MovieDetailsProps>(
-    `${apiBaseUrl}/movie/${id}?${REACT_APP_API_KEY}&append_to_response=videos&${movieLang}`
+    `${apiBaseUrl}/movie/${id}?append_to_response=videos&${movieLang}`,
+    VITE_ACCESS_TOKEN
   );
 
   return (
