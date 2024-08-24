@@ -19,8 +19,6 @@ const Movie = () => {
     VITE_ACCESS_TOKEN
   );
 
-  console.log(movieDetails);
-
   return (
     <main className="movie container">
       {movieDetails && (
