@@ -6,8 +6,8 @@ import Footer from './template/Footer';
 function App() {
   return (
     <div className="app">
-      <div className="app__wrapper space">
-        <Header />
+      <Header />
+      <div className="main-wrapper space">
         <AppRoutes />
       </div>
       <Footer />
