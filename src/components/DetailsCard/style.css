@@ -13,11 +13,11 @@
 .movie-details__release-data,
 .movie-details__overview-title {
   font-size: 1.1rem;
-   margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .movie-details__overview-text {
-   font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .movie-details__genres {
@@ -34,10 +34,9 @@
   border-radius: 5px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .movie-details {
-    display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 20px;
+    grid-template-rows: 0.5fr;
   }
 }
