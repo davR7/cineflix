@@ -31,7 +31,7 @@ const Pagination: React.FC<PaginationsProps> = ({ items, limit = 20 }) => {
   };
 
   return (
-    <ul className="movie-pagination">
+    <ul className="movie-pagination container section-space">
       {items && items.results.length >= 1 && (
         <li className="movie-pagination__item">
           <button

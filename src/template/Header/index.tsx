@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom';
 
 const AppHeader = () => {
   return (
-    <div className="app-header">
-      <Link to="/">
-        <CineflixLogo />
-      </Link>
-      <SearchBar />
-    </div>
+    <header className="app-header section-space">
+      <nav className="app-nav container">
+        <Link to="/">
+          <CineflixLogo />
+        </Link>
+        <SearchBar />
+      </nav>
+    </header>
   );
 };
 

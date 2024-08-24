@@ -14,7 +14,7 @@ type CardGroupProps = {
 
 const CardGroup: React.FC<CardGroupProps> = ({ data, error, loading }) => {
   return (
-    <div className="card-group">
+    <div className="card-group section-space">
       <div className="card-group__message">
         {loading && <Loading />}
         {error && (
@@ -24,7 +24,7 @@ const CardGroup: React.FC<CardGroupProps> = ({ data, error, loading }) => {
           <p className="info-message">Nenhum filme foi Encontrado.</p>
         )}
       </div>
-      <div className="card-group__items">
+      <div className="card-group__items container">
         {!loading &&
           data[0] &&
           data[0].results.map(movie => (
