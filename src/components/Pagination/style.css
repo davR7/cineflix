@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 30px;
 }
 
 .movie-pagination__item {

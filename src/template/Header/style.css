@@ -1,8 +1,11 @@
-@media (min-width: 850px) {
-  .app-header {
+.app-nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+@media (min-width: 850px) {
+  .app-nav {
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
   }
 }

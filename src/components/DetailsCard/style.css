@@ -9,12 +9,15 @@
 }
 
 .movie-details__original-title,
-.movie-details__overview-title,
-.movie-details__overview-text,
 .movie-details__runtime,
-.movie-details__release-data {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+.movie-details__release-data,
+.movie-details__overview-title {
+  font-size: 1.1rem;
+   margin-bottom: 0.8rem;
+}
+
+.movie-details__overview-text {
+   font-size: 0.8rem;
 }
 
 .movie-details__genres {
