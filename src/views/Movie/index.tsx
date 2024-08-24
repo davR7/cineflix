@@ -19,10 +19,12 @@ const Movie = () => {
     VITE_ACCESS_TOKEN
   );
 
+  console.log(movieDetails);
+
   return (
-    <main className="movie">
+    <main className="movie container">
       {movieDetails && (
-        <>
+        <div className="movie-box">
           <DetailsCard
             movieDetails={movieDetails}
             loadingMovieDetails={loadingMovieDetails}
@@ -32,7 +34,7 @@ const Movie = () => {
             trailers={movieDetails.videos.results}
             trailerLoading={loadingMovieDetails}
           />
-        </>
+        </div>
       )}
     </main>
   );
