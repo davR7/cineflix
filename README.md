@@ -4,8 +4,9 @@
 
 # Cineflix
 
-Cineflix é um aplicativo desenvolvido para consulta de filmes desenvolvida com Vite e React. Os usuários podem explorar informações detalhadas sobre diversas categorias de filmes, além de assistir o seu trailer diretamente no app. O projeto aborda sobre diversas
-funcionalidades do Rect.js:
+O **Cineflix** é uma aplicação desenvolvida com **React** e **Vite** que permite explorar filmes, visualizar informações detalhadas e assistir aos trailers utilizando a API do **The Movie Database (TMDb)**.
+
+## Conceitos abordados
 
 - ContextAPI
 - Rotas (React Router)
